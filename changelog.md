@@ -2,6 +2,10 @@
 
 This project uses [semver](http://semver.org/).
 
+## 0.1.1 &mdash; 3/10/16
+
+Switched from AVA to Mocha for tests because Travis-CI was throwing strange errors I don't feel like tracking down.
+
 ## 0.1.0 &mdash; 3/10/16
 
 Initial release.

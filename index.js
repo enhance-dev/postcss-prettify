@@ -11,5 +11,3 @@ module.exports = postcss.plugin('postcss-beautify', () => css =>
     if (rule.raws.before !== '') rule.raws.before = '\n\n'
   })
 )
-
-/* eslint no-param-reassign: [2, {"props": false}] */

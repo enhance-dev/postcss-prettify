@@ -1,4 +1,2 @@
-- lint
-- test + coverage
 - ci
 - readme

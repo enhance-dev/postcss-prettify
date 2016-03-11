@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "cover": "nyc ava"
+    "cover": "nyc ava",
+    "lint": "eslint index.js test/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,16 @@
   },
   "devDependencies": {
     "ava": "^0.12.0",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
     "mz": "^2.3.1",
     "nyc": "^6.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb/base",
+    "rules": {
+      "no-param-reassign": [2, { "props": false }],
+      "semi": [2, "never"]
+    }
   }
 }

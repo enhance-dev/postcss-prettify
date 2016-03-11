@@ -1,6 +1,6 @@
 const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-beautify', () => css =>
+module.exports = postcss.plugin('postcss-prettify', () => css =>
   css.walkRules(rule => {
     // one selector per line
     if (rule.selector.indexOf(', ') >= 0) {

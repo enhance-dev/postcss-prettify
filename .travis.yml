@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '5'
+  - '4'
+  - '0.12'
+script: 'nyc ava'
+after_script: 'npm install coveralls && nyc report --reporter=text-lcov | coveralls'

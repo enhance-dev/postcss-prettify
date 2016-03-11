@@ -4,8 +4,8 @@
   "description": "prettify postcss output",
   "main": "index.js",
   "scripts": {
-    "test": "ava",
-    "cover": "nyc ava",
+    "test": "mocha",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint index.js test/*.js"
   },
@@ -27,11 +27,13 @@
     "postcss": "^5.0.19"
   },
   "devDependencies": {
-    "ava": "^0.12.0",
+    "chai": "^3.5.0",
+    "co-mocha": "^1.1.2",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
-    "mz": "^2.3.1",
-    "nyc": "^6.0.0"
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "mz": "^2.3.1"
   },
   "eslintConfig": {
     "extends": "airbnb/base",

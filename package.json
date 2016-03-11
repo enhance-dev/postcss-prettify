@@ -6,6 +6,7 @@
   "scripts": {
     "test": "ava",
     "cover": "nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint index.js test/*.js"
   },
   "repository": {
@@ -35,8 +36,16 @@
   "eslintConfig": {
     "extends": "airbnb/base",
     "rules": {
-      "no-param-reassign": [2, { "props": false }],
-      "semi": [2, "never"]
+      "no-param-reassign": [
+        2,
+        {
+          "props": false
+        }
+      ],
+      "semi": [
+        2,
+        "never"
+      ]
     }
   }
 }

@@ -1,3 +1,5 @@
+- this -> node
+- add formatting to comments
 - modularize formatter further?
 - hook up babel to run on prepublish + ci (& test functionality)
 - update test suite / coverage to work with babel generated code

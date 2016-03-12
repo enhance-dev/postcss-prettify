@@ -4,7 +4,7 @@ const path = require('path')
 const assert = require('assert')
 const fs = require('mz/fs')
 const postcss = require('postcss')
-const prettify = require('..')
+const prettify = require('../dist')
 
 // tests ---------------------------------------------------
 

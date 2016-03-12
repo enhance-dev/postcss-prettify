@@ -1,3 +1,5 @@
+# WARNING &mdash; recent breaking changes yet to be reflected in readme or changelog &mdash; will update ASAP
+
 # `postcss-prettify` [![build][1]][2] [![coverage][3]][4]
 
 <b>[About](#about)</b> |

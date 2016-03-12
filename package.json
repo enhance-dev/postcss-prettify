@@ -2,8 +2,9 @@
   "name": "postcss-prettify",
   "version": "0.2.0",
   "description": "prettify postcss output",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel src --out-dir dist",
     "test": "mocha",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
@@ -24,9 +25,14 @@
   },
   "homepage": "https://github.com/codekirei/postcss-prettify#readme",
   "dependencies": {
+    "defined": "1.0.0",
     "postcss": "^5.0.19"
   },
   "devDependencies": {
+    "babel-cli": "6.6.5",
+    "babel-plugin-add-module-exports": "0.1.2",
+    "babel-preset-es2015-loose": "7.0.0",
+    "babel-preset-stage-1": "6.5.0",
     "co-mocha": "^1.1.2",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
@@ -42,5 +48,12 @@
         "never"
       ]
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015-loose",
+      "stage-1"
+    ],
+    "plugins": ["add-module-exports"]
   }
 }

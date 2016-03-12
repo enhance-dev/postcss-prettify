@@ -1,9 +1,9 @@
 // utils ---------------------------------------------------
 
 const path = require('path')
+const assert = require('assert')
 const fs = require('mz/fs')
 const postcss = require('postcss')
-const assert = require('chai').assert
 const prettify = require('..')
 
 // tests ---------------------------------------------------

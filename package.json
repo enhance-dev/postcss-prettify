@@ -27,7 +27,6 @@
     "postcss": "^5.0.19"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "co-mocha": "^1.1.2",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
@@ -38,12 +37,6 @@
   "eslintConfig": {
     "extends": "airbnb/base",
     "rules": {
-      "no-param-reassign": [
-        2,
-        {
-          "props": false
-        }
-      ],
       "semi": [
         2,
         "never"

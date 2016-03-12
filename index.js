@@ -1,13 +1,30 @@
+// import modules
+//------------------------------------------------------------------------------
 const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-prettify', () => css =>
-  css.walkRules(rule => {
-    // one selector per line
-    if (rule.selector.indexOf(', ') >= 0) {
-      rule.selector = rule.selector.replace(/, /g, ',\n')
-    }
+// define modifiers
+//------------------------------------------------------------------------------
+const call = mods => entity => mods.forEach(mod => mod.call(entity))
 
-    // empty line between rules
-    if (rule.raws.before !== '') rule.raws.before = '\n\n'
-  })
-)
+function precedingEmptyLine() {
+  if (this.raws.before === '\n') this.raws.before = '\n\n'
+}
+
+function oneSelectorPerLine() {
+  if (this.selector.indexOf(', ') >= 0) {
+    this.selector = this.selector.replace(/, /g, ',\n')
+  }
+}
+
+// call modifiers and export
+//------------------------------------------------------------------------------
+module.exports = postcss.plugin('postcss-prettify', () => css => {
+  css.walkRules(call([
+    oneSelectorPerLine,
+    precedingEmptyLine,
+  ]))
+
+  css.walkAtRules(call([
+    precedingEmptyLine,
+  ]))
+})

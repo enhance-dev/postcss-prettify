@@ -5,3 +5,12 @@
 .bar {
   background: green;
 }
+
+@media (min-width: 600px) {
+  .foo {
+    background: blue;
+  }
+  .bar {
+    background: yellow;
+  }
+}

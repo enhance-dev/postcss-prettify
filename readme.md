@@ -20,8 +20,10 @@ A [PostCSS](https://github.com/postcss/postcss) plugin to prettify output. Requi
 .foo, .bar {
   background: red;
 }
-.baz {
-  background: blue;
+@media only screen and (min-width: 600px) {
+  .baz {
+    background: blue;
+  }
 }
 ```
 
@@ -32,8 +34,10 @@ A [PostCSS](https://github.com/postcss/postcss) plugin to prettify output. Requi
   background: red;
 }
 
-.baz {
-  background: blue;
+@media only screen and (min-width: 600px) {
+  .baz {
+    background: blue;
+  }
 }
 ```
 

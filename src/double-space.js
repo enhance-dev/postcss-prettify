@@ -1,3 +1,3 @@
-export default function doubleSpace() {
-  this.raws.before += '\n'
+export default function doubleSpace(node) {
+  node.raws.before += '\n'
 }

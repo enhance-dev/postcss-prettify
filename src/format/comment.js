@@ -1,4 +1,6 @@
-import indent from '../indent'
+import depth from '../depth'
+import doubleSpace from '../double-space'
 
-export default node => {
+export default function comment(node) {
+  if (depth(node) === 0) doubleSpace(node)
 }

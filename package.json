@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
+    "watch:build": "npm run -s build -- -w",
+    "watch:test": "npm run -s test -- -R min -w",
     "test": "mocha",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",

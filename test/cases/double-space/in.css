@@ -1,11 +1,10 @@
 .foo {
   background: red;
 }
-
 .bar {
   background: green;
 }
-
+/* a comment */
 @media (min-width: 600px) {
   .foo {
     background: blue;

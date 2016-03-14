@@ -1,8 +1,6 @@
 import defined from 'defined'
-import getDepth from './get-depth'
 
-export default function indent(node) {
-  const depth = getDepth(node)
+export default function indent(node, depth) {
   const indentStr = '  '.repeat(depth)
   return ar => ar.forEach(key => {
     node.raws[key] = defined(node.raws[key], '').trim().concat(`\n${indentStr}`)

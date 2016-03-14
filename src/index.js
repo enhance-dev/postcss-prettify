@@ -8,5 +8,3 @@ export default postcss.plugin('postcss-prettify', () => css => {
   css.each(doubleSpace)
   css.first.raws.before = ''
 })
-
-/* eslint no-param-reassign: [2, {"props": false}] */

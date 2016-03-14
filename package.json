@@ -8,7 +8,7 @@
     "test": "mocha",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint index.js test/*.js"
+    "lint": "eslint src/*.js test/*.js"
   },
   "repository": {
     "type": "git",
@@ -43,10 +43,8 @@
   "eslintConfig": {
     "extends": "airbnb/base",
     "rules": {
-      "semi": [
-        2,
-        "never"
-      ]
+      "semi": [2, "never"],
+      "no-param-reassign": [2, {"props": false}]
     }
   },
   "babel": {

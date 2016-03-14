@@ -4,10 +4,11 @@
   "description": "prettify postcss output",
   "main": "dist/index.js",
   "scripts": {
+    "dev": "npm-run-all build --parallel watch:*",
     "build": "babel src --out-dir dist",
-    "watch:build": "npm run -s build -- -w",
-    "watch:test": "npm run -s test -- -R min -w",
     "test": "mocha",
+    "watch:build": "chokidar 'src/**/*.js' -c 'npm run -s build'",
+    "watch:test": "chokidar 'src/**/*.js' 'test/**/*' -c 'npm run -s test -- -R mocha-minimalist-reporter'",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint src/*.js test/*.js"
@@ -35,18 +36,29 @@
     "babel-plugin-add-module-exports": "0.1.2",
     "babel-preset-es2015-loose": "7.0.0",
     "babel-preset-stage-1": "6.5.0",
+    "chokidar-cli": "1.2.0",
     "co-mocha": "^1.1.2",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
-    "mz": "^2.3.1"
+    "mocha-minimalist-reporter": "1.1.0",
+    "mz": "^2.3.1",
+    "npm-run-all": "1.5.3"
   },
   "eslintConfig": {
     "extends": "airbnb/base",
     "rules": {
-      "semi": [2, "never"],
-      "no-param-reassign": [2, {"props": false}]
+      "semi": [
+        2,
+        "never"
+      ],
+      "no-param-reassign": [
+        2,
+        {
+          "props": false
+        }
+      ]
     }
   },
   "babel": {
@@ -54,6 +66,8 @@
       "es2015-loose",
       "stage-1"
     ],
-    "plugins": ["add-module-exports"]
+    "plugins": [
+      "add-module-exports"
+    ]
   }
 }

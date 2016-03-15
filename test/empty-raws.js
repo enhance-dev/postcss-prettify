@@ -1,31 +1,18 @@
 // utils ---------------------------------------------------
 
-const postcss = require('postcss')
-const assert = require('assert')
-const prettify = require('../dist')
+import postcss from 'postcss'
+import assert from 'assert'
+import path from 'path'
+import fs from 'mz/fs'
+import prettify from '../src'
 
 // tests ---------------------------------------------------
 
-const processor = postcss([prettify])
-
-const expected =
-`body {
-  background: red;
-}
-
-.foo {
-  background: blue;
-}
-
-@media (min-width: 600px) {
-  .bar {
-    background: yellow;
-  }
-}`
-
-exports['empty-raws'] = () => {
+exports['empty-raws'] = function* emptyRaws() {
+  const fixture = path.resolve('test', 'fixtures', 'empty-raws.css')
+  const expected = yield fs.readFile(fixture, 'utf8')
   const css = postcss.parse('body{background:red;}')
   css.append('.foo{background:blue;}')
   css.append('@media(min-width:600px){.bar{background:yellow;}}')
-  assert.equal(processor.process(css).css, expected)
+  assert.equal(prettify.process(css).css, expected.trim())
 }

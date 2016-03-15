@@ -1,3 +1,5 @@
-- update test suite / coverage to work with babel generated code
+- fix coverage
+- fix scripts?
 - hook up babel to run on prepublish + ci (& test functionality)
 - update changelog / readme
+- version bump

@@ -5,16 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "clean": "npm-run-all --parallel clean:*",
-    "clean:coverage": "rimraf coverage",
-    "clean:dist": "rimraf dist",
-    "lint": "eslint src/**/*.js test/**/*.js",
+    "clean": "rimraf dist",
+    "lint": "eslint 'src/**/*.js' 'test/**/*.js'",
     "test": "mocha",
     "cover": "istanbul cover _mocha",
-    "watch:build": "chokidar 'src/**/*.js' -c './scripts/build-incremental {path}'",
-    "watch:test": "chokidar 'src/**/*.js' 'test/**/*' -c 'npm run -s test -- -R mocha-minimalist-reporter'",
-    "watch:lint": "chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm run -s lint'",
-    "dev": "npm-run-all build --parallel watch:*"
+    "dev": "chokidar 'src/**/*.js' 'test/**/*' -c 'clear && npm-run-all lint cover'"
   },
   "repository": {
     "type": "git",
@@ -42,12 +37,12 @@
     "babel-preset-stage-1": "6.5.0",
     "babel-register": "6.7.2",
     "chokidar-cli": "1.2.0",
+    "clear-cli": "1.0.1",
     "co-mocha": "1.1.2",
-    "eslint": "2.3.0",
+    "eslint": "2.4.0",
     "eslint-config-airbnb": "6.1.0",
     "istanbul": "github:gotwarlost/istanbul#v1",
     "mocha": "2.4.5",
-    "mocha-minimalist-reporter": "1.1.0",
     "mz": "2.3.1",
     "npm-run-all": "1.5.3",
     "rimraf": "2.5.2"
@@ -60,20 +55,5 @@
     "plugins": [
       "add-module-exports"
     ]
-  },
-  "eslintConfig": {
-    "extends": "airbnb/base",
-    "rules": {
-      "semi": [
-        2,
-        "never"
-      ],
-      "no-param-reassign": [
-        2,
-        {
-          "props": false
-        }
-      ]
-    }
   }
 }

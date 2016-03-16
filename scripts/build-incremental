@@ -1,3 +1,0 @@
-#! /usr/bin/env sh
-
-babel "$1" -o $(echo "$1" | sed "s/src/dist/")

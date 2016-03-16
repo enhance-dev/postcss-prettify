@@ -1,4 +1,3 @@
-- move configs out of package.json
 - hook up babel to run on prepublish
 - update changelog / readme
 - version bump

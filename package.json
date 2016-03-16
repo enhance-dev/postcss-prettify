@@ -9,7 +9,8 @@
     "lint": "eslint 'src/**/*.js' 'test/**/*.js'",
     "test": "mocha",
     "cover": "istanbul cover _mocha",
-    "dev": "chokidar 'src/**/*.js' 'test/**/*' -c 'clear && npm-run-all lint cover'"
+    "dev": "chokidar 'src/**/*.js' 'test/**/*' -c 'clear && npm-run-all lint cover'",
+    "prepublish": "npm-run-all clean build"
   },
   "repository": {
     "type": "git",

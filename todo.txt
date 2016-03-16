@@ -1,3 +1,2 @@
-- hook up babel to run on prepublish
 - update changelog / readme
 - version bump

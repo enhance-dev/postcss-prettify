@@ -1,5 +1,3 @@
-# WARNING &mdash; recent breaking changes yet to be reflected in readme or changelog &mdash; will update ASAP
-
 # `postcss-prettify` [![version][1]][2] [![build][3]][4] [![coverage][5]][6]
 
 <b>[About](#about)</b> |
@@ -11,26 +9,24 @@
 
 ## About
 
-A [PostCSS](https://github.com/postcss/postcss) plugin to prettify output. Requires `node -v` >= `v4.0.0`. Should likely be included towards the end of a PostCSS plugin chain.
+A [PostCSS](https://github.com/postcss/postcss) plugin to prettify output. Requires at least Node.js v0.12. Should likely be included towards the end of a PostCSS plugin chain, if that's your jam.
 
-**Features:**
-- newlines between rules
+**Features**
+- line breaks between top-level rules and comments
+- smart spacing around rules and declarations
+- indenting with 2 spaces
 - one selector per line
 
+**Example Input**
 ```css
-/* example input */
 .foo, .bar {
-  background: red;
+    background: red;
 }
-@media only screen and (min-width: 600px) {
-  .baz {
-    background: blue;
-  }
-}
+@media only screen and (min-width:600px){.baz{background:blue;}}
 ```
 
+**Example Output**
 ```css
-/* example output */
 .foo,
 .bar {
   background: red;
@@ -45,7 +41,7 @@ A [PostCSS](https://github.com/postcss/postcss) plugin to prettify output. Requi
 
 ## Installation
 
-From a terminal:
+**From a terminal**
 
 ```sh
 npm install --save-dev postcss-prettify
@@ -53,13 +49,28 @@ npm install --save-dev postcss-prettify
 
 ## Usage
 
-```javascript
+**As a PostCSS Plugin**
+```js
 postcss([
   require('postcss-prettify')
 ])
 ```
 
 Check the [PostCSS docs](https://github.com/postcss/postcss#usage) for your chosen implementation.
+
+**Standalone**
+
+`postcss-prettify` also exposes a standalone [PostCSS processor instance](https://github.com/postcss/postcss/blob/master/docs/api.md#processorprocesscss-opts) as `prettify.process(css)`:
+
+```js
+var fs = require('mz/fs')
+var prettify = require('postcss-prettify')
+
+fs.readFile('src/style.css', 'utf8')
+  .then(data => prettify.process(data))
+  .then(res => fs.writeFile('dist/style.css', res.css))
+  .catch(err => console.err(err.stack))
+```
 
 ## License
 

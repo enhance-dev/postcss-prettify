@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @media (min-width: 600px) {
   .foo {
     animation: Demo 1s;
@@ -10,8 +8,4 @@
       display: flex;
     }
   }
-}
-
-@page :first {
-  margin: 1in;
 }

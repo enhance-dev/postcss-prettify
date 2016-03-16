@@ -3,16 +3,7 @@ import doubleSpace from '../double-space'
 import indent from '../indent'
 
 /**
- * Append space to colon if necessary.
- *
- * in:  @media (min-width:600px)
- * out: @media (min-width: 600px)
- *
- * in:  @media (min-width: 600px)
- * out: @media (min-width: 600px)
- *
- * in:  @page :first
- * out: @page :first
+ * Append space to colon if necessary. See at-rule-spacing-colon test case.
  */
 const params = {
   match: /(\(.*)(:)([^\s])(.*\))/g,

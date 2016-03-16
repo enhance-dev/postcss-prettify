@@ -6,6 +6,7 @@
 }
 /* a comment */
 @media (min-width: 600px) {
+  /* another comment */
   .foo {
     background: blue;
   }

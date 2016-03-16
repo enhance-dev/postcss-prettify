@@ -1,4 +1,3 @@
-- fix coverage
 - fix scripts?
 - hook up babel to run on prepublish + ci (& test functionality)
 - update changelog / readme

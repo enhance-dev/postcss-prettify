@@ -1,6 +1,6 @@
 # WARNING &mdash; recent breaking changes yet to be reflected in readme or changelog &mdash; will update ASAP
 
-# `postcss-prettify` [![build][1]][2] [![coverage][3]][4]
+# `postcss-prettify` [![version][1]][2] [![build][3]][4] [![coverage][5]][6]
 
 <b>[About](#about)</b> |
 <b>[Installation](#installation)</b> |
@@ -65,7 +65,9 @@ Check the [PostCSS docs](https://github.com/postcss/postcss#usage) for your chos
 
 [MIT](https://github.com/codekirei/postcss-prettify/blob/master/license)
 
-[1]: https://img.shields.io/travis/codekirei/postcss-prettify.svg?style=flat-square
-[2]: https://travis-ci.org/codekirei/postcss-prettify
-[3]: http://img.shields.io/coveralls/codekirei/postcss-prettify.svg?style=flat-square
-[4]: https://coveralls.io/github/codekirei/postcss-prettify?branch=master
+[1]: https://img.shields.io/npm/v/postcss-prettify.svg?style=flat-square&label=version
+[2]: https://www.npmjs.com/package/postcss-prettify
+[3]: https://img.shields.io/travis/codekirei/postcss-prettify.svg?style=flat-square&label=tests
+[4]: https://travis-ci.org/codekirei/postcss-prettify
+[5]: http://img.shields.io/coveralls/codekirei/postcss-prettify.svg?style=flat-square
+[6]: https://coveralls.io/github/codekirei/postcss-prettify?branch=master

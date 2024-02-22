@@ -4,7 +4,7 @@
   "description": "prettify postcss output",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./test/test.js | tap-arc"
+    "test": "tape ./test.js | tap-arc"
   },
   "type": "module",
   "repository": {

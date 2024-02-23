@@ -3,6 +3,9 @@
   "version": "0.3.4",
   "description": "prettify postcss output",
   "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "tape ./test.js | tap-arc"
   },

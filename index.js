@@ -1,4 +1,3 @@
-import postcss from 'postcss'
 import format from './lib/format/index.js'
 
 function prettify() {

@@ -1,5 +1,5 @@
 {
-  "name": "postcss-prettify",
+  "name": "@enhance/postcss-prettify",
   "version": "0.3.4",
   "description": "prettify postcss output",
   "main": "index.js",
@@ -9,21 +9,24 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codekirei/postcss-prettify.git"
+    "url": "git+https://github.com/enhance-dev/postcss-prettify.git"
   },
   "keywords": [
     "postcss-plugin",
     "prettify"
   ],
   "author": "Jacob Blakely (codekirei)",
+  "contributors": [
+    {
+      "name": "Kristofer Joseph",
+      "email": "kj@begin.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codekirei/postcss-prettify/issues"
+    "url": "https://github.com/enhance-dev/postcss-prettify/issues"
   },
-  "homepage": "https://github.com/codekirei/postcss-prettify#readme",
-  "dependencies": {
-    "defined": "1.0.0"
-  },
+  "homepage": "https://github.com/enhance-dev/postcss-prettify#readme",
   "devDependencies": {
     "postcss": "^8.4.35",
     "tap-arc": "^1.2.2",
